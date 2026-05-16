@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0b12"/>
+      <stop offset="100%" style="stop-color:#1a1520"/>
+    </linearGradient>
+    <linearGradient id="gw" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b7355"/>
+      <stop offset="100%" style="stop-color:#d4a843"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- City silhouette -->
+  <g opacity="0.3">
+    <rect x="60" y="400" width="30" height="160" fill="url(#gw)" rx="4"/>
+    <rect x="100" y="350" width="30" height="210" fill="url(#gw)" rx="4"/>
+    <rect x="140" y="280" width="30" height="280" fill="url(#gw)" rx="4"/>
+    <rect x="180" y="200" width="40" height="360" fill="url(#gw)" rx="6"/>
+    <rect x="230" y="320" width="30" height="240" fill="url(#gw)" rx="4"/>
+    <rect x="270" y="260" width="30" height="300" fill="url(#gw)" rx="4"/>
+    <rect x="310" y="160" width="60" height="400" fill="url(#gw)" rx="8"/>
+    <polygon points="340,80 290,200 390,200" fill="#d4a843" opacity="0.6"/>
+    <rect x="380" y="220" width="30" height="340" fill="url(#gw)" rx="4"/>
+    <rect x="420" y="300" width="30" height="260" fill="url(#gw)" rx="4"/>
+    <rect x="460" y="240" width="30" height="320" fill="url(#gw)" rx="4"/>
+    <rect x="500" y="360" width="30" height="200" fill="url(#gw)" rx="4"/>
+  </g>
+  <!-- Text -->
+  <text x="600" y="280" font-family="Georgia, serif" font-size="64" font-weight="bold" fill="#d4a843" text-anchor="middle" letter-spacing="3">MINAS TIRITH</text>
+  <text x="600" y="350" font-family="Georgia, serif" font-size="28" fill="#a09070" text-anchor="middle" letter-spacing="2">LEGO® Icons Collection</text>
+  <line x1="350" y1="390" x2="850" y2="390" stroke="#d4a843" stroke-width="1" opacity="0.5"/>
+  <text x="600" y="440" font-family="Arial, sans-serif" font-size="18" fill="#c0b090" text-anchor="middle" letter-spacing="5">THE LORD OF THE RINGS</text>
+  <!-- Brick pattern -->
+  <g opacity="0.05">
+    <rect x="550" y="490" width="14" height="6" rx="1" fill="#d4a843"/>
+    <rect x="566" y="490" width="14" height="6" rx="1" fill="#d4a843"/>
+    <rect x="582" y="490" width="14" height="6" rx="1" fill="#d4a843"/>
+    <rect x="598" y="490" width="14" height="6" rx="1" fill="#d4a843"/>
+    <rect x="614" y="490" width="14" height="6" rx="1" fill="#d4a843"/>
+    <rect x="630" y="490" width="14" height="6" rx="1" fill="#d4a843"/>
+    <rect x="558" y="498" width="14" height="6" rx="1" fill="#d4a843"/>
+    <rect x="574" y="498" width="14" height="6" rx="1" fill="#d4a843"/>
+    <rect x="590" y="498" width="14" height="6" rx="1" fill="#d4a843"/>
+    <rect x="606" y="498" width="14" height="6" rx="1" fill="#d4a843"/>
+    <rect x="622" y="498" width="14" height="6" rx="1" fill="#d4a843"/>
+  </g>
+</svg>
