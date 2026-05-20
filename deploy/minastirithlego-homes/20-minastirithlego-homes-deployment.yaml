@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minastirithlego-homes
+  namespace: minastirithlego-homes
+  labels:
+    app.kubernetes.io/name: minastirithlego-homes
+    app.kubernetes.io/part-of: minastirithlego-homes
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: minastirithlego-homes
+      app.kubernetes.io/part-of: minastirithlego-homes
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: minastirithlego-homes
+        app.kubernetes.io/part-of: minastirithlego-homes
+    spec:
+      containers:
+        - name: web
+          image: ghcr.io/gateszhangc/minastirithlego-homes
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 3
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 15
+            periodSeconds: 20
+          startupProbe:
+            httpGet:
+              path: /
+              port: 80
+            failureThreshold: 30
+            periodSeconds: 5

@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: minastirithlego-homes
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/gateszhangc/k8s-fleet.git
+    targetRevision: main
+    path: tenants/minastirithlego-homes
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: minastirithlego-homes
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

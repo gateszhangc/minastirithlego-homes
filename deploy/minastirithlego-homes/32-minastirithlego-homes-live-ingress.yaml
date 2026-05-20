@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: minastirithlego-homes-live
+  namespace: minastirithlego-homes
+  labels:
+    app.kubernetes.io/name: minastirithlego-homes
+    app.kubernetes.io/part-of: minastirithlego-homes
+  annotations:
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - minastirithlego.homes
+      secretName: minastirithlego-homes-live-tls
+  rules:
+    - host: minastirithlego.homes
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: minastirithlego-homes
+                port:
+                  number: 80

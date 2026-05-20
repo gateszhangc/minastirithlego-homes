@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: minastirithlego-homes
+  labels:
+    app.kubernetes.io/name: minastirithlego-homes
+    app.kubernetes.io/part-of: minastirithlego-homes
